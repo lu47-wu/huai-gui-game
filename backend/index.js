@@ -1,19 +1,10 @@
 const express = require('express');
-const cors = require('cors');
 const dotenv = require('dotenv');
 
 // 加载环境变量
 dotenv.config();
 
 const app = express();
-const port = 3001;
-
-// 配置CORS
-app.use(cors({
-  origin: '*', // 在生产环境中应该设置为具体的前端域名
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
 
 // 请求日志中间件
 app.use((req, res, next) => {
