@@ -1,6 +1,6 @@
 import { Story, Message } from '../types';
 
-export const buildGamePrompt = (story: Story, conversationHistory: Message[], question: string): string => {
+export const buildGamePrompt = (story: Story, _conversationHistory: Message[], question: string): string => {
   return `
 你是一个严格的海龟汤游戏主持人，必须基于以下信息，用最简短的格式回答。
 

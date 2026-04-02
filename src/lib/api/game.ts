@@ -1,7 +1,6 @@
 import { Story, Message } from '../../types';
-import { buildGamePrompt } from '../prompts';
 
-export const askAI = async (question: string, story: Story, history: Message[] = []): Promise<string> => {
+export const askAI = async (question: string, story: Story, _history: Message[] = []): Promise<string> => {
   try {
     // 调用后端接口（使用相对路径，通过Vite代理转发）
     const response = await fetch('/api/chat', {

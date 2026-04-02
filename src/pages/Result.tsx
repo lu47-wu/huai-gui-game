@@ -11,8 +11,8 @@ const Result: React.FC = () => {
   const [showContent, setShowContent] = useState(false)
   const [showButton, setShowButton] = useState(false)
   const [displayedBottom, setDisplayedBottom] = useState('')
-  const [typingIndex, setTypingIndex] = useState(0)
-  const typingRef = useRef<NodeJS.Timeout | null>(null)
+  const [_typingIndex, setTypingIndex] = useState(0)
+  const typingRef = useRef<number | null>(null)
 
   useEffect(() => {
     // 从location state中获取数据

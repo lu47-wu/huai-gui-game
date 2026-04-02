@@ -14,8 +14,8 @@ const Game: React.FC = () => {
   const [isGameOver, setIsGameOver] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [displayedSurface, setDisplayedSurface] = useState('')
-  const [typingIndex, setTypingIndex] = useState(0)
-  const typingRef = useRef<NodeJS.Timeout | null>(null)
+  const [_typingIndex, setTypingIndex] = useState(0)
+  const typingRef = useRef<number | null>(null)
 
   useEffect(() => {
     if (id) {
