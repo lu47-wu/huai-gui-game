@@ -6,6 +6,12 @@ dotenv.config();
 
 const app = express();
 
+// 健康检查端点
+app.get('/health', (req, res) => {
+  // 不执行任何数据库、API等外部调用，立即返回成功
+  res.status(200).send('OK');
+});
+
 // 请求日志中间件
 app.use((req, res, next) => {
   console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
