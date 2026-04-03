@@ -1,10 +1,14 @@
 const express = require('express');
+const cors = require('cors');
 const dotenv = require('dotenv');
 
 // 加载环境变量
 dotenv.config();
 
 const app = express();
+
+// 允许所有来源的跨域请求（必须在所有路由之前）
+app.use(cors());
 
 // 健康检查端点
 app.get('/health', (req, res) => {
