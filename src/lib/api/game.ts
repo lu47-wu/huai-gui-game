@@ -1,7 +1,7 @@
 import { Story, Message } from '../../types';
 
 // 后端 API 基础 URL
-const API_BASE_URL = 'https://huai-gui-game-production.up.railway.app';
+const API_BASE_URL = 'https://huai-gui-game-production-1b1a.up.railway.app';
 
 export const askAI = async (question: string, story: Story, _history: Message[] = []): Promise<string> => {
   try {
