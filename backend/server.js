@@ -1,10 +1,4 @@
 const app = require('./index');
-const cors = require('cors');
-
-// 使用 CORS 中间件，仅允许您的 Vercel 前端访问
-app.use(cors({
-  origin: 'https://huai-gui-game.vercel.app' // ★ 关键：填入您的真实Vercel域名
-}));
 
 // 启动服务器
 const PORT = process.env.PORT || 8080;
