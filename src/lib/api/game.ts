@@ -1,9 +1,12 @@
 import { Story, Message } from '../../types';
 
+// 后端 API 基础 URL
+const API_BASE_URL = 'https://huai-gui-game-production.up.railway.app';
+
 export const askAI = async (question: string, story: Story, _history: Message[] = []): Promise<string> => {
   try {
-    // 调用后端接口（使用相对路径，通过Vite代理转发）
-    const response = await fetch('/api/chat', {
+    // 调用后端接口（使用 Railway 后端 URL）
+    const response = await fetch(`${API_BASE_URL}/api/chat`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -40,8 +43,8 @@ export const askAI = async (question: string, story: Story, _history: Message[] 
 
 export const requestHint = async (story: Story, history: Message[]): Promise<string> => {
   try {
-    // 调用后端接口（使用相对路径，通过Vite代理转发）
-    const response = await fetch('/api/hint', {
+    // 调用后端接口（使用 Railway 后端 URL）
+    const response = await fetch(`${API_BASE_URL}/api/hint`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
